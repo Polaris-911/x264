@@ -326,7 +326,7 @@ function pixel_avg2_w4_rvv, export=1
     add       a0, a0, a1
     vse8.v    v3, (a0)
     add       a0, a0, a1
-    bnez      a5, 1b
+    bgt       a5, zero, 1b
     ret
 endfunc
 
@@ -350,7 +350,7 @@ function pixel_avg2_w8_rvv, export=1
     add       a0, a0, a1
     vse8.v    v3, (a0)
     add       a0, a0, a1
-    bnez      a5, 1b
+    bgt       a5, zero, 1b
     ret
 endfunc
 
@@ -374,7 +374,7 @@ function pixel_avg2_w16_rvv, export=1
     add       a0, a0, a1
     vse8.v    v3, (a0)
     add       a0, a0, a1
-    bnez      a5, 1b
+    bgt       a5, zero, 1b
     ret
 endfunc
 
@@ -398,7 +398,7 @@ function pixel_avg2_w20_rvv, export=1
     add       a0, a0, a1
     vse8.v    v4, (a0)
     add       a0, a0, a1
-    bnez      a5, 1b
+    bgt       a5, zero, 1b
     ret
 endfunc
 
